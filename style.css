@@ -1,0 +1,116 @@
+/* =========================
+   SHARK THEME - LIGHT BLUE
+   Thresher Shark + Ocean UI
+========================= */
+
+/* Background */
+body {
+    background: linear-gradient(to bottom, #bfe9ff, #6ec6ff, #2b7bbf);
+    color: #08324a;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Main containers */
+.container, .main, #main, .content {
+    background: rgba(255, 255, 255, 0.75) !important;
+    border-radius: 15px;
+    border: 2px solid #8fd3ff;
+    box-shadow: 0 0 15px rgba(0, 120, 200, 0.3);
+}
+
+/* Headers */
+h1, h2, h3 {
+    color: #0b4f6c;
+    text-shadow: 0 0 5px #bfe9ff;
+}
+
+/* Links */
+a {
+    color: #0077b6;
+}
+a:hover {
+    color: #00b4d8;
+}
+
+/* Buttons */
+button, input[type="button"], input[type="submit"] {
+    background: #7dd3fc;
+    border: 2px solid #38bdf8;
+    border-radius: 10px;
+    color: #023047;
+    transition: 0.3s;
+}
+button:hover {
+    background: #38bdf8;
+    transform: scale(1.05);
+}
+
+/* =========================
+   🫧 BUBBLES ANIMATION
+========================= */
+
+body::before, body::after {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.5) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px;
+    animation: bubbles 20s linear infinite;
+    pointer-events: none;
+    z-index: 999;
+}
+
+@keyframes bubbles {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-1000px); }
+}
+
+/* =========================
+   🐚 SEASHELL DECOR
+========================= */
+
+.seashell {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3e/Seashell_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* =========================
+   🦈 THRESHER SHARK FEATURE
+========================= */
+
+.header::after {
+    content: "";
+    position: fixed;
+    bottom: 10px;
+    right: -200px;
+    width: 200px;
+    height: 100px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5f/Thresher_shark.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: sharkSwim 25s linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+@keyframes sharkSwim {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-150vw); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #bfe9ff;
+}
+::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 10px;
+}
